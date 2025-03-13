@@ -1,0 +1,17 @@
+name: "Test"
+description: "Test"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Retrieve Grafana API Key
+      uses: aws-actions/aws-secretsmanager-get-secrets@v2
+      id: get-secret
+      with:
+        secret-ids: |
+          GRAFANA_API_KEY, vn-infra-jenkins-credential-grafana-api-key
+
+    - name: Succesful
+      shell: bash
+      run: |
+        echo "Success!"
