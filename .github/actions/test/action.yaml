@@ -9,7 +9,7 @@ runs:
       id: get-secret
       with:
         secret-ids: |
-          GRAFANA_API_KEY, vn-infra-jenkins-credential-grafana-api-key
+          WOOT, vn-infra-jenkins-credential-grafana-api-key
 
     - name: Succesful
       shell: bash
